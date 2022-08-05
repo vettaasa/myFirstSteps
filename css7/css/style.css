@@ -1,0 +1,138 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,*:before,*:after{
+	-moz-box-sizing:  border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family: inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+
+/*-----------------------*/
+
+body{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color: #e8e8e8;
+	padding: 50px;
+}
+
+.list{
+	margin: 0 0 50px 0;
+}
+
+.list li{
+	font-size: 20px;
+	line-height: 36px;
+	color: #273d46;
+}
+
+.list li:before{
+	content: url('../img/icons/check_icon.png');
+	margin: 0 10px 0 0;
+}
+
+.list li:first-child{
+	text-decoration: line-through;
+}
+
+.list li:nth-child(2){
+	font-weight: 700;
+}
+
+.list li:nth-child(3){
+	font-style: italic;
+}
+
+.list li:last-child{
+	text-transform: uppercase;
+}
+
+.list li:hover{
+	color: red;
+	text-decoration: none;
+	font-weight: 400;
+	font-style: normal;
+	text-transform: none;
+}
+
+.list li:hover:before{
+	content: url('../img/icons/check_icon_2.png');
+}
+
+.button{
+	display: block;
+	width: 200px;
+	height: 45px;
+	box-shadow: 0px 6px 40px 0px rgba(128,183,179,0.54);
+	border-radius: 30px;
+	background-color: rgb(128,183,179);
+	font-size: 14px;
+	line-height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: #ffffff;
+	margin: 0 0 50px 0;
+}
+
+.button span:after{
+	content: '';
+	background: url('../img/icons/shape.png') center no-repeat;
+	padding: 0 0 0 30px;
+}
+
+.button:hover{
+	background-color: #3a5856;
+	box-shadow: 0px 6px 40px 0px rgba(128,183,179,0.54);
+}
+
+.button:active{
+	background-color: #818181;
+	box-shadow: 0 0 0 0;
+}
+
+.block1{
+	margin: 0 0 40px 0;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.block1:first-line{
+	color: #ff0000;
+}
+
+.block2{
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.block2:first-letter{
+	font-size: 25px;
+	color: #ff0000;
+}
