@@ -1,0 +1,59 @@
+@import "nullstyle.scss"; // файл обнуляющих стилей
+
+$fz: 30px;
+$color-1: blue;
+$color-2: orange;
+
+@mixin fontz($f,$c){
+	font-size: $f;
+	color: $c;
+}
+
+%link{
+	@include fontz(14px,green);
+	border-bottom: 2px dashed green;
+	line-height: 20px;
+}
+
+body{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	padding: 30px;
+}
+
+.link-1{
+	@extend %link;
+	display: inline-block;
+	margin: 0 0 20px 0;
+
+	&:hover{
+		color: $color-1;
+		border-bottom: 2px dashed $color-1;
+	}
+}
+
+.block{
+	font-size: 14px;
+	line-height: 20px;
+
+	>p{
+		color: $color-2;
+		margin: 0 0 20px 0;
+	}
+	.block-text{
+		font-size: 20px;
+		span{color: green;}
+		margin: 0 0 20px 0;
+	}
+	&.block-big{
+		font-size: $fz;
+	}
+}
+
+.link-2{
+	@extend %link;
+	font-size: $fz;
+	color: #fff;
+	border-bottom: 2px dashed #fff;
+	background-color: #666;
+	width: 300px/960px*100%;
+}
