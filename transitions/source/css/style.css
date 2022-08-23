@@ -1,0 +1,201 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.option:hover .button {
+  width: 90%;
+}
+
+.example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.button {
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  padding: 0 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  top: 0;
+  position: relative;
+  margin: 10px;
+  width: 50%;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+.button_1 {
+  color: #fff;
+  background-color: #5e5373;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+.button_2 {
+  color: #fff;
+  background-color: #18b5a4;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+.button_3 {
+  color: #5e5373;
+  background-color: #ece89d;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+.button_4 {
+  color: #fff;
+  background-color: #5e5373;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+.button_5 {
+  color: #fff;
+  background-color: #18b5a4;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+.button_6 {
+  color: #5e5373;
+  background-color: #ece89d;
+  -webkit-transition-timing-function: steps(10, start);
+          transition-timing-function: steps(10, start);
+}
+.button_7 {
+  color: #fff;
+  background-color: #5e5373;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.button_8 {
+  color: #fff;
+  background-color: #5e5373;
+  -webkit-box-shadow: 0 5px 0 #3c354a;
+          box-shadow: 0 5px 0 #3c354a;
+  -webkit-transition-property: background-color, top, -webkit-box-shadow;
+  transition-property: background-color, top, -webkit-box-shadow;
+  transition-property: background-color, top, box-shadow;
+  transition-property: background-color, top, box-shadow, -webkit-box-shadow;
+  -webkit-transition-delay: 0s, 0.5s, 0.5s;
+          transition-delay: 0s, 0.5s, 0.5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+.button_8:hover {
+  top: 2px;
+  -webkit-box-shadow: 0 3px 0 #3c354a;
+          box-shadow: 0 3px 0 #3c354a;
+  background-color: #18b5a4;
+}
+.button_9 {
+  color: #fff;
+  background-color: #18b5a4;
+  -webkit-box-shadow: 0 5px 0 #083b32;
+          box-shadow: 0 5px 0 #083b32;
+  -webkit-transition: top 1s ease 0s, background-color 1s ease-in 0.5s;
+  transition: top 1s ease 0s, background-color 1s ease-in 0.5s;
+}
+.button_9:hover {
+  top: 2px;
+  -webkit-box-shadow: 0 3px 0 #3c354a;
+          box-shadow: 0 3px 0 #3c354a;
+  background-color: #5e5373;
+  -webkit-transition: top 2s ease 0s, background-color 2s ease 0s;
+  transition: top 2s ease 0s, background-color 2s ease 0s;
+}

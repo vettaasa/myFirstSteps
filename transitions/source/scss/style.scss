@@ -1,0 +1,105 @@
+@import "nullstyle.scss";
+
+.option{
+	display: flex;
+	padding: 30px;
+	justify-content: center;
+	flex-direction: column;
+	&:hover .button{width: 90%;}
+}
+
+.example{
+	display: flex;
+	padding: 30px;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.button{
+	text-decoration: none;
+	align-items: center;
+	display: inline-block;
+	text-align: center;
+	line-height: 60px;
+	padding: 0 30px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 18px;
+	border-radius: 10px;
+	top: 0;
+	position: relative;
+	margin: 10px;
+	width: 50%;
+	transition-duration: 1s;
+
+	&_1{
+		color: #fff;
+		background-color: #5e5373;
+		transition-timing-function: ease;
+	}
+
+	&_2{
+		color: #fff;
+		background-color: #18b5a4;
+		transition-timing-function: ease-in;
+	}
+
+	&_3{
+		color: #5e5373;
+		background-color: #ece89d;
+		transition-timing-function: ease-out;
+	}
+
+	&_4{
+		color: #fff;
+		background-color: #5e5373;
+		transition-timing-function: ease-in-out;
+	}
+
+	&_5{
+		color: #fff;
+		background-color: #18b5a4;
+		transition-timing-function: linear;
+	}
+
+	&_6{
+		color: #5e5373;
+		background-color: #ece89d;
+		transition-timing-function: steps(10,start);
+	}
+
+	&_7{
+		color: #fff;
+		background-color: #5e5373;
+		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+
+	&_8{
+		color: #fff;
+		background-color: #5e5373;
+		box-shadow: 0 5px 0 #3c354a;
+		transition-property: background-color, top, box-shadow;
+		transition-delay: 0s, 0.5s, 0.5s;
+		transition-timing-function: ease;
+
+		&:hover{
+		top: 2px;
+		box-shadow: 0 3px 0 #3c354a;
+		background-color: #18b5a4;
+		}
+	}
+	&_9{
+		color: #fff;
+		background-color: #18b5a4;
+		box-shadow: 0 5px 0 #083b32;
+		transition: top 1s ease 0s, background-color 1s ease-in 0.5s;
+
+		&:hover{
+		top: 2px;
+		box-shadow: 0 3px 0 #3c354a;
+		background-color: #5e5373;
+		transition: top 2s ease 0s, background-color 2s ease 0s;
+		}
+	}
+}
+
