@@ -1,0 +1,190 @@
+@import "nullstyle.scss";
+
+body{
+	height: 100%;
+	background-color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+h1{
+	font-size: 40px;
+	margin: 0 0 50px 0;
+	text-align: center;
+}
+
+h2{
+	font-size: 30px;
+	margin: 0 0 20px 0;
+}
+
+p{
+	margin: 20px 0;
+}
+
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.content{
+	padding: 50px 10%;
+
+	&__2D &__block div{
+		display: flex;
+		text-transform: uppercase;
+		justify-content: center;
+		align-items: center;
+		letter-spacing: 1px;
+		text-align: center;
+		width: 150px;
+		height: 150px;
+		transition: all 0.8s ease 0s;
+	}
+	&__block{
+		margin: 0 0 50px 0;
+	}
+	&__translate{
+		background-color: #794f45;
+		transform: translate(-50%, 0px);
+		position: relative;
+		left: 50%;
+
+		&:hover{transform: translate(50px, -50px);}
+	}
+	&__scale{
+		transform: scale(1, 1);
+		background-color: #77608d;
+
+		&:hover{transform: scale(-1, 0.75);}
+	}
+	&__rotate{
+		transform: rotate(45deg);
+		background-color: #7a956b;
+
+		&:hover{transform: rotate(0deg);}
+	}
+	&__skew{
+		transform: skew(0deg, 0deg);
+		background-color: #794f45;
+
+		&:hover{transform: skew(-20deg,-20deg);}
+	}
+	&__matrix{
+		background-color: #77608d;
+
+		&:hover{transform: matrix(0.75, 0.3, 0, 1, 50, 30);}
+	}
+	&__multi{
+		background-color: #7a956b;
+
+		&:hover{transform: translate(50px, 50px) scale(0.5) rotate(45deg);}
+	}
+	&__transfrom-origin{
+		background-color: #794f45;
+		transform-origin: 0 0;
+
+		&:hover{transform: rotate(-30deg);}
+	}
+
+	&__3D &__wrapper3d{
+		width: 150px;
+		height: 150px;
+		background-color: rgba(255, 255, 255, 0.1);
+		perspective-origin: center;
+		perspective: 400px;
+
+		div{
+			display: flex;
+			text-transform: uppercase;
+			justify-content: center;
+			align-items: center;
+			letter-spacing: 1px;
+			text-align: center;
+			transition: all 0.8s ease 0s;
+			width: 150px;
+			height: 150px;
+		}
+	}
+	&__perspective{
+		background-color: #7a956b;
+
+		&:hover{transform: rotateX(50deg);}
+	}
+	&__translate3D{
+		background-color: #794f45;
+
+		&:hover{transform: translate3D(20px, 20px, 50px);}
+	}
+	&__scale3D{
+		background-color: #77608d;
+
+		&:hover{transform: scale3d(2, 2, 5);}
+	}
+	&__rotate3D{
+		background-color: #7a956b;
+
+		&:hover{transform: rotate3d(1, 1, 1, 45deg);}
+	}
+	&__matrix3D{}
+	&__multi3D{
+		background-color: #794f45;
+
+		&:hover{transform: translate3d(20px, 20px, 150px) rotate3d(1, 1, 1, 20deg);}
+	}
+	&__transform-style-wrapper{
+		width: 150px;
+		height: 150px;
+		background-color: rgba(255, 255, 255, 0.1);
+		perspective: 400px;
+		transform-style: preserve-3d;
+	}
+	&__transform-style{
+		display: flex;
+		text-transform: uppercase;
+		justify-content: center;
+		align-items: center;
+		letter-spacing: 1px;
+		text-align: center;
+		transition: all 0.8s ease 0s;
+		width: 150px;
+		height: 150px;
+		background-color: #7a956b;
+
+		&:hover{transform: rotateX(50deg);}
+	}
+}
+
+
+.flip{
+	&__body{
+		position: relative;
+		width: 150px;
+		height: 150px;
+		transition: all 0.8s ease 0s;
+		transform-style: preserve-3d;
+	}
+	&__front, &__back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__front{
+		z-index: 2;
+		transform: rotateY(0deg); 
+		background-color: #77608d;
+		backface-visibility: hidden;
+	}
+	&__back{
+		transform: rotateY(-180deg);
+		background-color: rgba(121, 79, 69, 0.5);
+	}
+	&:hover &__body {transform: rotateY(-180deg);}
+}
