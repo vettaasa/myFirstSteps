@@ -1,0 +1,321 @@
+@import "nullstyle.scss";
+
+body{
+	height: 100%;
+	background-color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+h1{
+	font-size: 40px;
+	margin: 0 0 50px 0;
+}
+
+h2{
+	font-size: 30px;
+	margin: 0 0 20px 0;
+}
+
+h3{
+	font-size: 30px;
+	margin: 0 0 20px 0;
+}
+
+h4{
+	font-size: 20px;
+	margin: 0 0 15px 0;
+}
+
+h5{
+	font-size: 16px;
+	margin: 0 0 10px 0;
+}
+
+p{
+	line-height: 20px;
+	margin: 20px 0;
+}
+
+
+
+div.section__item_info{
+  padding: 10px;
+  margin: 10px;
+}
+
+span.section__item_info{
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+}
+
+img.section__image{
+  max-width: 300px;
+}
+
+
+
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+}
+
+
+
+.content{
+	padding: 30px 3%;
+}
+
+
+
+.section{
+	margin: 0 0 50px 0;
+
+
+	&__block{
+		margin: 0 0 30px 0;
+
+		&_hidden{
+			overflow: hidden;
+			padding: 25px;
+		}
+	}
+
+
+	&__item{
+		text-align: justify;
+
+		&_info{}
+
+		&_item{padding: 15px;}
+
+		&_color-1{background-color: #794f45;}
+		&_color-2{background-color: #77608d;}
+		&_color-3{background-color: #7a956b;}
+
+		&_size{
+			width: 500px;
+			padding: 15px;
+			box-sizing: border-box;
+			margin: 0 0 10px;
+		}
+		&_size-2{
+			width: 500px;
+			padding: 15px;
+			box-sizing: content-box;
+		}
+
+		&_background-color{
+			padding: 15px;
+			margin: 15px;
+		}
+
+		&_background-image{
+			color: rgb(177, 177, 177);
+			padding: 0 0 0 50px;
+			background: url('../../img/icons/icon.svg') 0 0 / 33px no-repeat;
+		}
+
+		&_position{
+			position: relative;
+			color: rgb(177, 177, 177);
+			padding: 0 0 0 40px;
+
+			&:before{
+				content:'';
+				width: 25px;
+				height: 25px;
+				background-color: #fff;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		&_hidden{
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			box-shadow: 0 0 20px #d9f5c8;
+		}
+
+		&_center{
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			margin: 0 auto;
+		}
+
+		&_minus{
+			padding: 15px;
+
+			&-top{
+				position: relative;
+				z-index: 2;
+				margin: -50px 0 0 0;
+			}
+		}
+
+		&_flex{padding: 15px;}
+
+		&_collapse{
+			padding: 15px;
+			margin: 0 0 20px 0;
+			&-top{margin: -10px 0 20px 0;}
+		}
+
+		&_bottom{
+			padding: 10px;
+			margin: 0 0 20px 0;
+		}
+
+		&_right{
+			padding: 15px;
+			margin: 0 20px 0 0;
+		}
+
+		&_parent{
+			margin: 0 0 20px 0;
+			&:last-child{margin: 0;}
+		}
+	}
+
+
+	&__items{display: flex;}
+
+
+	&__row{
+		display: flex;
+		margin: 0 -15px;
+	}
+
+
+	&__column{
+		padding: 0 15px;
+		flex: 0 1 33.333%;
+	}
+
+
+	&__list{margin: 0 0 20px 0;}
+
+	&__list li{
+		margin: 0 0 10px 0;
+		&:last-child{margin: 0px;}
+	}
+
+
+	&__body{
+		&_last{
+			background-color: #77608d;
+			padding: 20px 50px;
+		}
+		&_parent{
+			background-color: #7a956b;
+			padding: 50px;
+		}
+	}
+
+
+	&__image{}
+	&__slider{}
+	&__compare{}
+}
+
+
+
+.slider{
+	display: flex;
+	overflow: hidden;
+	margin: -25px 0;
+	padding: 25px 0;
+
+
+	&__item{
+		text-align: center;
+		flex: 0 1 33.333%;
+	}
+
+
+	&__image{
+		width: 150px;
+		height: 150px;
+		margin: 0 auto;
+		border-radius: 50%;
+		background-color: #7a956b;
+		box-shadow: 0 0 20px #d9f5c8;
+	}
+}
+
+
+
+.portfolio{
+	background-color: #794f45;
+	padding: 30px 15px;
+
+	&__header{margin: 0 0 20px 0;}
+	&__text{}
+}
+
+
+
+.header{
+	text-align: center;
+
+	&__title{
+		font-size: 30px;
+		margin: 0 0 5px 0;
+	}
+	
+	&__text{font-size: 20px;}
+}
+
+
+
+.contacts{
+	background-color: #77608d;
+	padding: 30px 15px;
+
+	&__header{margin: 0 0 40px 0;}
+	&__text{}
+}
+
+
+
+.compare{
+	&__row{
+		display: flex;
+		margin: 0 -15px 30px;
+	}
+
+	&__column{
+		padding: 0 15px;
+		flex: 0 1 50%;
+	}
+
+	&__item{
+		padding: 20px 15px; 
+		&_bad{padding: 80px 15px;}
+		&_color-1{background-color: #794f45;}
+		&_color-2{background-color: #7a956b;}
+	}
+
+	&__title{
+		font-size: 30px;
+		margin: 0 0 10px 0;
+		&_bad{margin: 0 0 40px 0;}
+	}
+
+	&__text{}
+
+	&__link{
+		display: inline-block;
+		padding: 5px;
+		line-height: 10px;
+		&_bad{padding: 0;}
+	}
+}
+
