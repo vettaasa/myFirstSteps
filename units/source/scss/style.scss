@@ -1,0 +1,100 @@
+@import "nullstyle.scss";
+@import url("");
+
+body{
+	background-color: #333;
+	color: #fff;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 0.875rem; // перевод в rem: делим размер по макету (14px) на 16 (размер шрифта по умолчанию)
+}
+
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.example{
+	padding: 80px 0;
+
+	&__container{
+		padding: 0 30px;
+		margin: 0 auto;
+		max-width: 65.625rem; // перевод в rem: делим ширину по макету (1020px+30px) на 16 (размер шрифта по умолчанию)
+		position: relative;
+	}
+	&__header{
+		margin: 0 0 25px 0;
+		max-width: 46.875rem; // перевод в rem: делим ширину по макету (750px) на 16 (размер шрифта по умолчанию)
+	}
+	&__sub-title{
+		color: #a989c7;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 0.875rem; // перевод в rem: делим размер по макету (14px) на 16 (размер шрифта по умолчанию)
+		line-height: 1.7; // перевод в % либо части: делим размер по макету (24px) на размер шрифта (14px)
+		margin: 0 0 1.07em 0; // перевод в em: делим размер по макету (15px) на размер шрифта (14px)
+	}
+	&__title{
+		color: #93b482;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 2.625rem;
+		line-height: 1.19; // перевод в % либо части: делим размер по макету (50px) на размер шрифта (42px)
+		margin: 0 0 0.38em 0; // перевод в em: делим размер по макету (16px) на размер шрифта (42px)
+		letter-spacing: 0.12em; // перевод в em: делим размер по макету (5px) на размер шрифта (42px)
+	}
+	&__text{
+		line-height: 1.5; // перевод в % либо части: делим размер по макету (24px) на размер шрифта (16px)
+	}
+	&__items{
+		display: flex;
+		row-gap: 24px;
+		margin: 0 -12px;
+		flex-wrap: wrap;
+	}
+	&__item{
+		padding: 0 12px;
+		flex: 1 1 33.333%; // делим общую ширину 100% на три
+		min-width: 20rem; 
+	}
+}
+
+.item-example{
+	display: flex;
+	column-gap: 15px;
+
+	&__icon{
+		flex: 0 0 55px;
+		img{width: 100%;}
+	}
+	&__body{}
+	&__title{
+		color: #f2726f;
+		font-weight: 900;
+		font-size: 1.5rem; // перевод в rem: делим размер по макету (24px) на 16 (размер шрифта по умолчанию)
+		margin: 0 0 0.45em 0; // перевод в em: делим размер по макету (11px) на размер шрифта (24px)
+	}
+	&__text{
+		line-height: 1.5; // перевод в % либо части: делим размер по макету (24px) на размер шрифта (16px)
+	}
+}
+
+@media (min-width: 48em) {
+	.example__container::before{
+		content: '';
+		background: url("../../img/icons/decor.png") 0 0 / 100% no-repeat;
+		position: absolute;
+		right: 0;
+		width: 14.57%; // ширину картинки по макету делим на ширину example__container (родителя с position: relative;) и умножаем на 100: 153/1050*100=14.57
+		padding-top: 22.95%; // высоту картинки по макету делим на ширину example__container (родителя с position: relative;) и умножаем на 100: 241/1050*100=22.95
+		top: 50%; // половина высоты example__container (родителя с position: relative;)
+		transform: translate(50%, -50%); // сдвиг вправо и вверх на половину ширины/высоты картинки
+	}
+}
+
+@media (max-width: 48em) {
+	.example__title{
+		font-size: 2rem;
+	}
+}
+
